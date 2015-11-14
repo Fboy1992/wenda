@@ -1,0 +1,269 @@
+@charset "utf-8";
+/* css reset start */
+h1,h2,h3,h4,h5,h6,p,ol,ul,li,dl,dd,textarea,form,input,select,body,div,a{
+	margin:0;padding:0;font-size:12px;font-family: sans-serif "微软雅黑",Tahoma,Arial;
+}
+em{font-style:normal;}
+li{list-style:none;}
+a{text-decoration:none;outline: medium none;}
+img{vertical-align:top;border:none;}
+textarea{overflow:auto;resize:none;}
+/*html{width:100%;height:100%;}
+body{width:100%;height:100%;position:relative;overflow:hidden;}*/
+/* css reset end */
+
+/*top start*/
+#top {
+	width: 100%;
+	height: 5px;
+	background: #333;
+}
+
+/*top end*/
+/*header start*/
+
+#header {
+	width:100%;
+	height: 90px;
+	background: #0174A9;
+}
+
+#header .cont {
+	position: relative;
+	height: 100px;
+	width: 960px;
+	margin: 0 auto;
+	
+}
+#header .cont h2 {	
+	display:block;
+	height: 100px;
+	width:300px;
+	position: absolute;
+	left: 10px;
+	top:20px;
+	font-size: 32px;
+	color:#333;
+}
+#header .cont h2 span {
+	display: block;
+	font-size: 14px;
+	color:#ba202a;
+	text-indent: 3px;
+}
+#header .cont .add {
+	display: block;
+	position: absolute;
+	left:300px;
+	top:0;
+
+}
+#header .cont .add img {
+	display: block;
+	height: 60px;
+	width: 60px;
+	border-radius:3px; 
+	position: relative;
+	top:10px;
+	cursor: pointer;
+}
+#header .cont .add p {
+	position: relative;
+	top:10px;
+	margin-left:5px; 
+}
+/*header end*/
+
+/*bd start*/
+div#bd {
+	width: 100%;
+	height:685px;
+	/*height:100%;*/
+	background: url(../images/wish_body.jpg) repeat-x center center;
+}
+#bd div#page {
+	position: relative;
+	height: 680px;
+	width: 100%;
+		
+}
+#bd div#page .paper {
+	/*position: relative;*/
+	cursor: all-scroll;
+	margin: 5px;
+	float: left;
+	height: 300px;
+	width: 200px;
+	border-radius:3px;
+	
+}
+#bd div#page .a1 {
+	background: url(../images/paper.jpg) no-repeat ;
+}
+#bd div#page .a2 {
+	background: url(../images/paper1.jpg) no-repeat ;
+}
+#bd div#page .a3 {
+	background: url(../images/paper2.jpg) no-repeat ;
+}
+/*许愿纸开始*/
+#bd div#page .paper a {
+	float: right;
+	margin:5px 10px 0 0;
+	color:orange;
+
+}
+#bd div#page .paper a:hover {
+	text-decoration: underline;
+}
+#bd div#page .paper h2 {
+	display: block;
+	position: relative;
+	top:25px;
+	left:20px;
+	color:#bb114b;
+}
+#bd div#page .paper h2 span {
+	color:#00884f;
+}
+#bd div#page .paper p {
+	position: relative;
+	top:32px;
+	left:20px;
+}
+#bd div#page .paper p#content {
+	position: relative;
+	top: 30px;
+	left:0px;
+	height: 210px;
+	width: 180px;
+	margin: 0 auto;
+	border:1px solid #999;
+	border-radius:3px;
+	text-indent: 5px;
+	line-height: 20px;
+	word-wrap:break-word;
+}
+#bd div#page .paper p#content img {
+	height: 20px;
+	width:20px;
+	margin: 0px 3px 0 3px;
+}
+
+/*许愿纸结束*/
+
+#send_form {
+	z-index: 9999;
+	height: 400px;
+	width: 300px;
+	background: #ddfffe;
+	position: absolute;
+	top:50%;
+	left:50%;
+	margin-left:-150px;
+	margin-top: -200px;
+	border-radius: 3px;
+}
+#send_form h2 {
+	height: 30px;
+	width: 100%;
+	text-align: center;
+	line-height: 30px;
+
+}
+#send_form  a#close {
+	position: absolute;
+	top:3px;
+	right: 3px;
+	height: 20px;
+	width: 20px;
+	font-size: 20px;
+	text-align: center;
+	line-height: 20px;
+	display: block;
+	background: #00ffee;
+	border-radius: 3px;
+}
+#send_form form {
+	height: 360px;
+	width: 280px;
+	border: 1px solid #888;
+	margin: 0 auto;
+}
+#send_form form p {
+	text-indent: 5px;
+	height: 30px;
+	line-height: 30px;
+}
+#send_form form input {
+	width: 270px;
+	height: 30px;
+	margin: 0 auto;
+	margin: 0 0 0 4px;
+	text-indent: 5px;
+}
+#send_form form textarea {
+	width: 270px;
+	height: 200px;
+	margin: 0 auto;
+	margin: 0 0 0 4px;
+	text-indent: 5px;
+}
+#send_form form div {
+	height: 30px;
+	width: 100%;
+	
+}
+#send_form form div img {
+	height: 20px;
+	width:20px;
+	margin: 5px 3px 0 2px;
+	cursor: pointer;
+}
+
+#send_form form span{
+	display: block;
+	height: 20px;
+	width: 100px;
+	background: blue;
+	border-radius: 3px;
+	margin: 5px auto;
+	text-align: center;
+	color:orange;
+	line-height: 20px;
+	cursor: pointer
+}
+/*bd end*/
+
+/*footer start*/
+#footer {
+	position: relative;
+	width: 100%;
+	height: 30px;
+	background: #333;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 30px;
+	
+}
+#footer span {
+	/*position: relative;
+	z-index: 999;*/
+	display: inline-block;
+	width:35%;
+	height: 5px;
+	margin: 0;
+}
+#footer span.footer_one {background: red;}
+#footer span.footer_two {
+	width:25%;
+	background: #0174A9;
+	height: 20px;
+	vertical-align: middle;
+	line-height: 20px;
+	text-align: center;
+
+}
+#footer span.footer_three {background: green;}
+
+/*footer end*/

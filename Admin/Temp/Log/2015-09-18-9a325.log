@@ -1,0 +1,2 @@
+[Error]Unknown column 'adminname' in 'field list'	SELECT `aid`,adminname,`logintime`,`loginip`,`lock` FROM sf_admin [Time]15-09-18 05:51 [File]C:\AppServ\www\wenda\hdphp\Lib\Driver\Db\DbMysqli.class.php [Line]123
+控制器中不存在方法deb locking

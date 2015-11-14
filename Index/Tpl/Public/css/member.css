@@ -1,0 +1,156 @@
+#center {
+	width: 960px;
+	height: 563px;
+	margin: 5px auto;
+	position: relative;
+	
+}
+
+/*左侧开始*/
+#center #left {
+	width: 220px;
+	height: 400px;
+	border:2px solid #24ad41;
+	position: absolute;
+	top: 5px;
+	
+}
+/*用户信息开始*/
+#center #left .userinfo {
+	height: 160px;
+	width:200px;
+	margin: 0 auto;
+}
+#center #left .userinfo dt {
+	float: left;
+	margin-top: 20px;
+	margin-left: 10px;
+	height: 50px;
+	width: 50px;
+
+}
+#center #left .userinfo dd{
+	float: right;
+	width: 140px;
+	height: 30px;
+	
+	text-align: center;
+	line-height: 30px;
+}
+#center #left .userinfo table {
+	width: 200px;
+	
+}
+#center #left .userinfo table td {
+	text-align: center;
+	border: 1px solid #F1DE08;
+}
+/*用户信息结束*/
+/*用户分页列表开始*/
+#center #left ul {
+	width: 200px;
+	height: 204px;
+	margin: 0 auto;
+	background: #F1DE08;
+	border: 1px solid #24ad41;
+	
+}
+#center #left ul li {
+	height: 34px;
+	text-align: center;
+	width: 200px;
+	line-height: 34px;
+	
+}
+#center #left ul li.cur {
+	
+	background: #f10844;
+}
+
+#center #left ul li a {
+	color: #333;
+	font-size: 16px;
+
+}
+
+/*用户分页列表结束*/
+/*左侧结束*/
+#center #right {
+	width: 720px;
+	height:558px;
+	position: absolute;
+	top: 5px;
+	right:0px;
+	border:2px solid #24ad41;
+}
+#center #right p{
+	height: 30px;
+	width: 720px;
+	text-indent: 5px;
+	font-size: 14px;
+	line-height: 30px;
+	border-bottom:1px dashed #24ad41;
+	font-family: "Microsoft YaHei";
+}
+#center #right ul {
+	margin-top: 5px;
+	text-align: center;
+	height: auto;
+	width: 720px;
+	position: relative;
+}
+#center #right ul li {
+	display: inline-block;
+	height: 40px;
+	width: 230px;
+	border:1px solid #333;
+	line-height: 40px;
+	font-size: 14px;
+	font-family: "Microsoft YaHei";
+}
+#center #right ul.ask-filter li {
+	margin: 0 5px;
+}
+#center #right .list {
+	width: 720px;
+	height:auto;
+}
+#center #right .list-filter {
+	width: 720px;
+	height:auto;
+	background: #fff;
+
+	position: absolute;
+}
+#center #right .list table {
+	width: 700px;
+	margin: 10px auto;
+	padding: 0;
+	border:1px solid #24ad41;
+}
+#center #right .list table th,td {
+	margin:0;
+	padding: 0;
+	text-align: center;
+}
+#center #right table{
+	width: 700px;
+	margin: 10px auto;
+	overflow: hidden;
+	/*border: 1px solid #f1de08;*/
+}
+#center #right table td,th {
+	margin:0;
+	padding: 0;
+
+	/*background: #fee34e;*/
+}
+#center #right .lv-rule table{
+	margin: 10px auto;
+	width: 90%;
+	
+
+}
+#center #right .lv-rule table th,td{
+	border:1px solid #24ad41;
+}

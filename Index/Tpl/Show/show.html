@@ -1,0 +1,163 @@
+<load file="__TPL__/Common/head.html">
+	<sciript src="__PUBLIC__/js/show.js"></sciript>
+	<link rel="stylesheet" href="__PUBLIC__/css/right.css" />
+	<link rel="stylesheet" href="__PUBLIC__/css/show.css" />
+</head>
+<body>     
+<load file="__TPL__/Common/top.html">
+<!-- 中部开始 -->
+<div id='center'>
+	
+	<div id='left'>
+		<h3 id='location'>
+			<a href="">全部分类</a>
+			<list from="$fatherCate" name="n">
+				<if value="!$hd.list.n.last">
+					&gt;<a href="#">{$n.title}</a>
+				<else/>
+					&gt;{$n.title}
+				</if>
+			</list>
+		</h3>
+		<div id='answer-info'>
+			<!-- 如果没有解决用wait -->
+			<div class='ans-state <if value="$ask['solve'] eq 0">
+					wait</if>'></div>
+			<div class='answer'>
+				<p class='ans-title'>{$ask.content}
+					<b class='point'>{$ask.reward}</b>
+				</p>
+			</div>
+			<ul>
+				<li>用户：<a href="">{$ask.username}</a></li>
+				<li>等级：<i class='level lv1' title='{$lv}' style="color:orange;">{$lv}</i></li>
+				<li>{$ask.time|date:'Y-m-d', @@}</li>
+		
+			</ul>
+
+			<if value="isset($_SESSION['username']) && isset($_SESSION['uid']) && $ask['solve'] eq 0 && $_SESSION['uid'] != $ask['uid']">
+			<div class='ianswer'>
+				<form action="{|U('answer')}" method='POST'>
+					<p>我来回答</p>
+					<textarea name="content"></textarea>
+					<input type="hidden" name='asid' value='{$hd.get.asid}'>
+					<input type="submit" value='提交回答' id='anw-sub'/>
+				</form>
+			</div>
+			</if>
+			<!-- 满意回答 -->
+			<if value="{$ask.solve eq 1}">
+			<div class='ans-right'>
+				<p class='title'><i></i>满意回答<span></span></p>
+				<p class='ans-cons'>{$answerOk['content']}</p>
+				<dl>
+					<dt>
+						<a href=""><img src="{$faceok}" width='48' height='48'/></a>
+					</dt>
+					<dd>
+						<a href="">用户:{$answerOk['username']}</a>
+					</dd>
+					<dd><i class='level lv1' style="color:orange;">等级：{$answerOk_lv}</i></dd>
+					<dd>{$ratio}%</dd>
+				</dl>
+			</div>
+			</if>
+			<!-- 满意回答 -->
+		</div>
+
+		<div id='all-answer'>
+			<div class='ans-icon'></div>
+			<p class='title'>共 <strong>{$count}</strong> 条回答</p>
+			<ul>
+				<list from="$answer" name="n">
+					<li>
+						<div class='face'>
+							<a href="">
+								<img src="{$face}" width='48' height='48'/>
+							</a>
+							<a href="#">{$n.username}</a>
+						</div>
+						<div class='cons blue'>
+							<p>{$n.content}<span style='color:#888;font-size:12px'>&nbsp;&nbsp;({$n.time|date:'Y-m-d', @@})</span></p>
+						</div>
+						<if value="$ask.uid eq $hd.session.uid">
+						<a href="{|U('accept', array('anid'=>$n['anid'], 'asid'=>$n['asid']))}" class='adopt-btn'>采纳</a>
+						</if>
+					</li>
+				</list>
+			</ul>
+			<div class='page'>
+				{$page}
+			</div>
+		</div>
+		<!-- 待解决相关问题 
+		不是当前问题，是同类下的其他问题，就是相关问题
+
+
+
+		-->
+	</div>
+	<!-- 右侧区域开始 -->
+	<div id="right">
+		<div class="top">
+		<h3>用户管理中心</h3>
+		<if value="isset($_SESSION['username']) && isset($_SESSION['uid'])">
+		<dl class="user">
+			<dt>{$hd.session.username}</dt>
+			<dd><img src="__PUBLIC__/image/user_main.png" alt="1234" /></dd>
+			<dd>金币：<em>{$userInfo.point}</em></dd>
+			<dd>经验值：<em>{$userInfo.exp}</em></dd>
+		</dl>
+		<div class="relate">
+			<span>回答数<em>{$userInfo.answer}</em></span>
+			<span>采纳率<em>{$userInfo.ratio}%</em></span>
+			<span>提问数<em>{$userInfo.ask}</em></span>
+		</div>
+		<div class="rel_ask">
+			<a href="#"><em><img src="__PUBLIC__/image/ask.png" alt="" /></em><span>我提问的</span></a>
+			<a href="#"><em><img src="__PUBLIC__/image/answer.png" alt="" /></em><span>我回答的</span></a>
+		</div>
+		<else/>
+			<div class="r_login">
+				<span><a href="#">本区域登陆可见</a></span>
+			</div>
+		</if>
+		</div>
+		<div class="bot">
+		<h3>SF问答之星</h3>
+		<dl class="one">
+			<dt>本日回答问题最多之人</dt>
+			<if value="!empty($eve_star)">
+				<dd>{$eve_star.username}</dd>
+				<dd><img src="__PUBLIC__/image/user.png" alt="fds" /></dd>
+				<dd>回答数:<em>{$eve_star.answer}</em></dd>
+				<dd>采纳率:<em>{$eve_star.ratio}%</em></dd>
+			<else/>
+				<dd class="rg">今日尚未有人回答问题</dd>
+			</if>
+		</dl>
+		<dl>
+			<dt>历史回答问题最多之人</dt>
+			<dd>{$his_star.username}</dd>
+			<dd><img src="__PUBLIC__/image/user.png" alt="fdsf" /></dd>
+			<dd>回答数:<em>{$his_star.answer}</em></dd>
+			<dd>采纳率:<em>{$his_star.ratio}%</em></dd>
+		</dl>
+		</div>
+		<div class="honor_wall">
+			<h3>助人光荣榜</h3>
+			<h4>前100人</h4>
+			<ul>
+				<list from="$helper" name="n">
+					<li>{$n.username}</li>
+				</list>
+			</ul>
+		</div>
+	</div>
+	<!-- 右侧区域结束 -->
+</div>
+<!-- 中部结束 -->
+
+<load file="__TPL__/Common/foot.html">
+</body>
+</html>

@@ -1,0 +1,28 @@
+<load file="__TPL__/Common/head.html">
+	<sciript src="__PUBLIC__/js/ask.js"></sciript>
+	<link rel="stylesheet" href="__PUBLIC__/css/search.css" />
+</head>
+<body>     
+<load file="__TPL__/Common/top.html">
+
+<!-- 搜索内容 -->
+<div id="searcont">
+	<if value="empty($search)">
+		<ul>
+			<li style="color:red;font-size:18px;text-align:center;font-family:'Microsoft YaHei';">没有您搜索的答案，请重新搜索</li>
+		</ul>
+	<else/>
+	<list from="$search" name="n">
+		<ul>
+			<li> <a href="" class="title">{$n.content}</a> </li>
+			<li>{$n.ansContent}</li>
+			<li class="time"><span>{$n.title} - {$n.answer}个回答</span> - 提问时间: {$n.time|date:'Y-m-d', @@}</li>
+		</ul>
+	</list>
+	</if>
+</div>
+<!-- 搜索内容结束 -->
+</div>
+<load file="__TPL__/Common/foot.html">
+</body>
+</html>

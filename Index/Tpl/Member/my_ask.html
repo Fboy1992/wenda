@@ -1,0 +1,76 @@
+<load file="__TPL__/Common/head.html">
+	<script src="__PUBLIC__/js/member_answer.js"></script>
+	<link rel="stylesheet" href="__PUBLIC__/css/member.css" />
+</head>
+<body>     
+<load file="__TPL__/Common/top.html">
+<div id='center'>
+<!-- 左侧 -->
+	<load file="__TPL__/Common/left.html">
+	<div id='right'>
+			<p class='title'>我的提问</p>
+			<ul class='ask-filter'>
+				<li class='cur' style="background:#f10844;">待解决问题</li>
+				<li>已解决问题</li>
+			</ul>
+			<ul>
+			<div class='list list-filter'>
+				<table>
+					<if value="empty($noSolve)">
+					<tr height='140'>
+						<td>你还没有待解决的提问</td>
+					</tr>
+					<else/>
+					<tr>
+						<th class='t1'>标题</th>
+						<th>回答数</th>
+						<th class='t3'>更新时间</th>
+					</tr>
+					<list from="$noSolve" name="n">
+					<tr>
+						<td class='t1'>
+							<a href="">{$n.content}</a><span>[{$n.title}]</span>
+						</td>
+						<td>{$n.answer}</td>
+						<td class='t3'>{$n.time|date:'Y-m-d',@@}</td>
+					</tr>
+					</list>
+
+					</if>
+
+				</table>
+				<div>{$noSolvePage}</div>
+			</div>
+
+			<div class='list list-filter' style="display:none;">
+				<table>
+					<if value="empty($Solve)">
+					<tr height='140'>
+						<td>你还没有已解决的提问</td>
+					</tr>
+					<else/>
+					<tr>
+						<th class='t1'>标题</th>
+						<th>回答</th>
+						<th class='t3'>更新时间</th>
+					</tr>
+					<list from="$Solve" name="n">
+					<tr>
+						<td class='t1'>
+							<a href="">{$n.content}</a><span>[{$n.title}]</span>
+						</td>
+						<td>{$n.answer}</td>
+						<td class='t3'>{$n.time|date:'Y-m-d',@@}</td>
+					</tr>
+					</list>
+					</if>
+				</table>
+				<div>{$SolvePage}</div>
+			</div>
+		</div>
+	</ul>
+</div>
+<!--------------------中部结束-------------------->
+<load file="__TPL__/Common/foot.html">
+</body>
+</html>

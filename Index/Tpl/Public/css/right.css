@@ -1,0 +1,168 @@
+/*右侧区域开始*/
+#right {
+	
+	height: 505px;
+	width: 215px;
+	position:absolute;
+	top:0;
+	right: 0;
+	
+}
+/*右侧上部开始*/
+
+#right .top {
+	position: absolute;
+	top:0;
+	right: 0;
+	border: 2px solid #24ad41;
+	height: 240px;
+	width: 215px;
+	
+}
+#right .top h3 {
+	text-align: center;
+	background: #24ad41;
+}
+#right .top .user {
+	text-align: center;
+	position: relative;
+	height: 120px;
+	width: 215px;
+	margin: 0 auto;
+	
+}
+#right .top .user dt {
+	position: absolute;
+	left: 10px;
+}
+#right .top .user dd {
+	font-size: 12px;
+	position: relative;
+	top:30px;
+	margin-top: 5px;
+}
+#right .top .user dd em {
+	color:#d65;
+}
+#right .top .relate {
+	height: 50px;
+	width: 215px;
+	border-bottom: 2px solid #24ad41;
+}
+#right .top .relate span {
+	font-size: 12px;
+	position: relative;
+	line-height: 30px;
+	display: inline-block;
+	float: left;
+	width: 71px;
+	height: 50px;
+	text-align: center;
+}
+#right .top .relate span em {
+	position: absolute;
+	top:20px;
+	left: 24px;
+	text-align: center;
+	color:#d65;
+
+}
+#right .top .rel_ask {
+	height: 50px;
+	width: 215px;
+	text-align: center;
+	position: relative;
+}
+#right .top .rel_ask a {
+	margin-top: 10px;
+	display: inline-block;
+	line-height: 20px;
+	height: 20px;
+	width: 90px;
+	border:2px solid #d56;
+	font-size: 12px;
+	color:#333;
+	
+}
+#right .top .rel_ask a:hover {
+	background: rgba(11,234,43,0.8);
+}
+#right .top .rel_ask a em{
+	display: block;
+	height: 15px;
+	width: 15px;
+	float:left;
+	margin-top: 2px;
+	margin-left: 8px;
+	
+}
+#right .top .rel_ask a span{
+	display: block;
+	margin-left: 5px;
+	width: 70px;
+	height: 20px;
+	line-height: 20px;	
+	text-align: center;
+}
+#right .top div.r_login {
+	background: #f10844;
+	height: 30px;
+	width: 200px;
+	text-align: center;
+	line-height: 30px;
+	margin:20px auto;
+}
+#right .top div.r_login span a{
+	color:#333;
+	font-weight: bold;
+}
+/*右侧上部结束*/
+/*右侧下部开始*/
+#right .bot {
+	position: absolute;
+	top:248px;
+	right: 0;
+	border: 2px solid #24ad41;
+	height: 257px;
+	width: 215px;
+	
+}
+#right .bot h3 {
+	text-align: center;
+	background: #24ad41;
+}
+#right .bot dl dt {
+	font-size: 12px;
+	color: #24ad41;
+}
+
+#right .bot  dl.one {
+	position: relative;
+	border-bottom:2px solid #24ad41;
+	height: 120px; 
+	width: 215px;
+}
+#right .bot  dl {
+	position: relative;
+	display: block;
+}
+#right .bot dt {
+	position: absolute;
+	left: 10px;
+}
+#right .bot dd {
+	font-size: 12px;
+	position: relative;
+	top:20px;
+	margin-top: 3px;
+	text-align: center;
+}
+#right .bot dd img {
+	height: 20px;
+	width: 20px;
+	
+}
+#right .bot dd em {
+	color:#f65;
+}
+/*右侧下部结束*/

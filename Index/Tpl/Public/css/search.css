@@ -1,0 +1,44 @@
+/*
+搜索显示列表
+ */
+#searcont {
+	border: 2px solid #24ad41;
+	width: 956px;
+	height: 600px;
+	position: relative;
+	margin: 5px auto;
+	overflow-y: scroll;
+	overflow-x:hidden;
+}
+#searcont ul {
+	width: 950px;
+	height: 130px;
+	margin: 0 auto;
+	border-bottom: 1px dashed #24ad41;
+	position: relative;
+
+	
+}
+#searcont ul li {
+	padding: 5px;
+	width: 100%;
+}
+#searcont ul li.time {
+	display: block;
+	font-size: 14px;
+	width: 300px;
+	height: 20px;
+	line-height: 20px;
+	position: absolute;
+	bottom: 0px;
+	right: 10px;
+	color: #f10844;
+}
+#searcont ul li.time span {
+	color: #1050a1;
+}
+#searcont ul li a {
+	font-size: 18px;
+	font-family: "Microsoft YaHei";
+	color: #f10844;
+}

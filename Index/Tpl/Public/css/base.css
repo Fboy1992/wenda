@@ -1,0 +1,447 @@
+@charset "utf-8";
+/* css reset start */
+h1,h2,h3,h4,h5,h6,p,ol,ul,li,dl,dd,textarea,form,input,select,body,div,a,body{
+	margin:0;padding:0;font-size:14px;font-family: "微软雅黑",Tahoma,Arial;
+}
+em{font-style:normal;}
+li{list-style:none;}
+a{text-decoration:none;outline: medium none;}
+img{vertical-align:top;border:none;}
+textarea{overflow:auto;resize:none;}
+body,html {
+	margin: 0;
+}
+/* css reset end */
+#top {
+	overflow: hidden;
+	height: 30px;
+	width: 100%;
+	margin: 0 auto;
+	/* border-bottom: 1px solid #333; */
+	box-shadow: 0px 1px 2px  #24ad41;
+}
+#top p.left{
+	position: relative;
+	top:0px;
+	left: 20px;
+	line-height: 30px;
+}
+#top div.reg_log {
+	height: 30px;
+	width: 140px;
+	position: absolute;
+	right: 10px;
+	top: 0px;
+	line-height: 30px;
+	text-align: center;
+}
+#top div.reg_log span {
+	padding: 0 5px;
+}
+#top div.reg_log span a{
+	color:#333;
+}
+/*注册盒子开始*/
+#reg {
+	position: absolute;
+	height: 300px;
+	width: 600px;
+	top:50%;
+	left:50%;
+	/*border:1px solid red;*/
+	z-index: 1999;
+	margin-top:-200px;
+	margin-left: -300px;
+	background: #343425;
+	border:1px solid orange;
+}
+#reg .error {
+	color:red;
+}
+#reg h2 {
+	background: #24ad41;
+}
+#reg h2  span{
+	float: right;
+	margin-right: 5px;
+	cursor: pointer;
+}
+#reg div {
+	height: 50px;
+	width: 100px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	background: orange;
+	text-align: center;
+	font-size: 18px;
+	line-height: 50px;
+	font-family: "Microsoft YaHei";
+}
+#reg p {
+	height: 30px;
+	width: 100%;
+	text-align: center;
+	margin: 5px 0 0 0;
+	
+}
+#reg p.sub {
+	margin-top: 30px;
+}
+#reg p span {
+	display: inline-block;
+	width:160px;
+	height:30px;
+	font-size: 14px;
+	font-family: "Microsoft YaHei";
+	
+	/*background: blue;*/
+}
+#reg p span.left {
+	width:60px;
+	text-align: right;
+	color:#999;
+}
+#reg p span.right {
+	text-align:left;
+	margin-left: 10px;
+}
+#reg p span.right img {
+	margin-left: 5px;
+	width: 65px;
+	height: 28px;
+}
+#reg p span.commet {
+	width: 180px;
+	font-size:12px;
+	text-align: left;
+	color:green;
+}
+#reg p span.error {
+	color:red;
+}
+#reg p input {
+	
+	width: 150px;
+	height: 80%;
+}
+#reg p input#code {
+	width:80px;
+}
+
+/*注册盒子结束*/
+/*登陆盒子开始*/
+
+#log {
+	position: absolute;
+	height: 300px;
+	width: 600px;
+	top:50%;
+	left:50%;
+	/*border:1px solid red;*/
+	z-index: 1999;
+	margin-top:-200px;
+	margin-left: -300px;
+	background: #343425;
+	border:1px solid orange;
+}
+#log .error {
+	color:red;
+}
+#log h2 {
+	background: #24ad41;
+}
+#log h2  span{
+	float: right;
+	margin-right: 5px;
+	cursor: pointer;
+}
+#log div {
+	height: 50px;
+	width: 100px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	background: #ef2333;
+	text-align: center;
+	font-size: 18px;
+	line-height: 50px;
+	font-family: "Microsoft YaHei";
+}
+#log p {
+	height: 30px;
+	width: 100%;
+	text-align: center;
+	margin: 5px 0 0 0;
+	line-height: 30px;
+	position: relative;
+	
+}
+#log p.sub {
+	margin-top: 30px;
+}
+
+#log p span {
+	display: inline-block;
+	width:160px;
+	height:30px;
+	font-size: 14px;
+	font-family: "Microsoft YaHei";
+	
+	/*background: blue;*/
+}
+#log p span.left {
+	width:60px;
+	text-align: right;
+	color:#999;
+	position: relative;
+}
+#log p span.right {
+	text-align:left;
+	margin-left: 10px;
+}
+#log p span.right img {
+	margin-left: 5px;
+	width: 65px;
+	height: 28px;
+}
+#log p span.commet {
+	width: 180px;
+	font-size:12px;
+	text-align: left;
+	color:green;
+}
+#log p span.error {
+	color:red;
+}
+#log p input {
+	
+	width: 150px;
+	height: 80%;
+}
+#log p input#auto {
+	width:15px;
+	height: 15px;
+	margin-top: 3px;
+}
+
+
+	
+/*登陆盒子结束*/
+/* 中间搜索区域开始 */
+#search {
+	position: relative;
+	width: 960px;
+	height: 80px;
+	/* border: 1px solid #24ad41; */
+	margin: 0 auto;
+	background: #333;
+}
+#search  .logo {
+	height: 80px;
+	width: 200px;
+	display: block;
+}
+#search div.box {
+	height: 80px;
+	width: 500px;
+	position: absolute;
+	left: 220px;
+	top:0;
+	
+}
+#search div.box input#text {
+	position: absolute;
+	top:25px;
+	left: 10px;
+	height: 30px;
+	width: 300px;
+	border:3px solid green;
+	text-indent: 5px;
+}
+#search div.box input#sub {
+	position: absolute;
+	top:27px;
+	right: 10px;
+	margin:0 25px;
+	height: 30px;
+	width: 120px;
+	border: none;
+	
+}
+#search a {
+	display: block;
+	height: 30px;
+	width: 120px;
+	position: absolute;
+	top: 27px;
+	right:130px;
+}
+#search a button {
+	height: 30px;
+	width: 120px;
+	font-family: "微软雅黑",Tahoma,Arial;
+	border: none;
+}
+/* 中间搜索区域开始 */
+/*绿色导航开始 */
+div#nav {
+	width: 960px;
+	height: 30px;
+	background: #24ad41;
+	margin: 0 auto;
+	position: relative;
+	z-index: 1555;
+}
+div#nav ul.list li {
+	float: left;
+	height: 30px;	
+	width: 60px;
+	line-height: 30px;
+	text-align: center;
+	z-index: 1555;
+}
+div#nav ul.list li.nav_sel a {
+	/*display: inline-block;*/
+	display: inline-block;
+	height: 30px;
+	width: 60px;
+	color:#000;
+	font-size: 14px;
+	text-align: center;
+	
+	line-height: 30px;
+}
+
+div#nav ul li a:hover {
+	background: #1b8a09;
+}
+div#nav ul li.ask_cate {
+	height: 30px;
+}
+div#nav ul li.ask_cate ul.hidden {
+
+	display: block;
+	width:300px;
+	height: 100px;
+	/*height: 200px;*/
+	border:1px solid orange;
+	border-top: none;
+	z-index: 1555;
+	background:#333;
+	vertical-align: middle;
+}
+div#nav ul li.ask_cate ul.hidden li {
+	display: inline-block;
+	height: 30px;
+	width: 100px;
+	
+}
+div#nav ul li.ask_cate ul.hidden li a {
+	display: inline-block;
+	height: 30px;
+	width: 100px;
+}
+div#nav ul li.ask_cate ul.hidden li a {
+	color: #eee;
+}
+div#nav p {
+	float: right;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 14px;
+	margin-right: 5px;
+}
+
+/*绿色导航结束 */
+
+
+
+/*光荣墙开始*/
+
+#honor_wall {
+	height: 160px;
+	width: 956px;
+	border: 2px solid #24ad41;
+	margin: 5px auto;
+	overflow:auto;
+	
+}
+#honor_wall h3 {
+	background: #24ad41;
+}
+
+#honor_wall table {
+	display: block;
+	
+	width: 90%;
+	
+	margin: 10px auto;
+	
+}
+#honor_wall table tr {
+	height: 20px;
+	width: 100%;
+
+	padding: 0 10px;
+}
+#honor_wall table td {
+	width: 450px;
+	text-align: center;
+	background: #24ad41;
+}
+
+/*光荣强结束*/
+/*名人名言开始*/
+
+#dream {
+	position: relative;
+	width: 956px;
+	height: 60px;
+	border: 2px solid #24ad41;
+	margin: 5px auto;
+}
+#dream h3 {
+	margin:5px 0 0 10px;
+	
+}
+#dream p {
+	margin:5px 0 0 10px;
+}
+/*名人名言结束*/
+
+/*底部开始*/
+#bottom {
+	position: relative;
+	width: 960px;
+	height: 120px;
+	background: #d43;
+	margin: 0 auto;
+}
+#bottom h3 {	
+	text-align: center;
+	position: relative;
+	top:15px;
+	margin:5px 0 0 10px;
+
+}
+#bottom p {
+	text-align: center;
+	position: relative;
+	top:20px;
+}
+#bottom p.copyright {
+	text-align: center;
+	position: relative;
+	top:30px;
+	font-size: 12px;
+	
+}
+/*底部结束*/
+
+
+
+
+
+
+
+

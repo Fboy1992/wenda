@@ -1,0 +1,84 @@
+<load file="__TPL__/Common/head.html">
+	<link rel="stylesheet" href="__PUBLIC__/css/index.css" />
+	<script src="__PUBLIC__/js/index.js"></script>
+	
+</head>
+<body>     
+	<load file="__TPL__/Common/top.html">
+	<div id="cont"> 
+		<!-- 左侧导航开始 -->         
+		<div id="sub_nav"> 
+			<h2>所有问题分类</h2> 
+			<list from="$cate" name="n">      
+			<dl class="c">
+				<dt><a href="{|U('List/index', array('cid'=>$n['cid']))}">{$n.title}</a></dt>
+				<dd>
+				<list from="$n['down']" name="v" row="2">
+					<span><a href="{|U('List/index', array('cid'=>$v['cid']))}">{$v.title}</a></span>
+				</list>
+				</dd> 
+				<ul class="c_ul"> 
+					<list from="$n['down']" name="v" start="3">
+						<li><a href="{|U('List/index', array('cid'=>$v['cid']))}">{$v.title}</a></li>
+					</list>                    	                 
+				</ul>             
+			</dl>
+			</list>
+		</div>
+		<!-- 左侧导航结束 -->         
+		<!-- 中部区域开始 --> 
+		<div id="center"> 
+			<!--轮播版开始 -->             
+			<div class="tab"> 
+				<div class="img">
+					<p>
+					<img src="__PUBLIC__/image/1.jpg" alt="" /><img src="__PUBLIC__/image/2.jpg" alt="" /><img src="__PUBLIC__/image/3.jpg" alt="" />
+					</p>
+				</div>                 
+			<ul class='tab_ul'>
+				<li><a href="#">快乐问答</a></li> 
+				<li><a href="#">一问一答</a></li> 
+				<li><a href="#">知行合一</a></li> 
+			</ul>             
+			</div> 
+			<!-- 轮播版结束 --> 
+			<!-- 问题开始 -->
+			<div class="ask"> 
+				<p class="title">                     
+					<span style="background:#24ad41;">待解决问题 </span>
+					<span>高分悬赏问题</span><a href="{|U('List/index', array('cid'=>0))}">more>></a>                 
+				</p> 
+				<div class="detail"> 
+					<ul> 
+						<list from="$noSolveL" name="n"> 
+							<!-- 这里的asid不能用点的方法，必须原生 -->
+							<li><a href="{|U('Show/show', array('asid'=>$n['asid'], 'cid'=>$n['cid']))}">{$n.content}</a><span>{$n.answer}回答</span></li> 
+						</list>
+					</ul>
+					<ul style="display:none;">
+						<list from="$noSolveH" name="n">
+							<li><b style="color:orange;">金币:{$n.reward}</b><a href="{|U('Show/show', array('asid'=>$n['asid'], 'cid'=>$n['cid']))}">{$n.content}</a><span>{$n.answer}回答</span></li>
+						</list>
+					</ul>
+				</div>
+			</div>
+			<!-- 问题结束 -->
+		</div>
+		<!-- 中部区域结束 -->
+		<load file="__TPL__/Common/right.html">
+	</div>
+	<div id="honor_wall">
+		<h3>SF光荣榜</h3>
+		
+			<table>
+				<tr bgcolor="#f10844"><th>用户名</th><th>采纳数</th></tr>
+			<list from="$helper" name="n">
+				<tr><td>{$n.username}</td><td>{$n.accept}</td></tr>
+			</list>
+			</table>
+		
+	</div>
+	<load file="__TPL__/Common/foot.html">
+	
+</body>
+</html>

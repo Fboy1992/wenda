@@ -1,0 +1,61 @@
+<div id="top">         
+	<p class="left">SF问答系统</p> 
+	<div class="reg_log">
+		<if value="isset($_SESSION['username']) && isset($_SESSION['uid'])">
+			<span class="userinfo"><a href="{|U('Member/index', array('uid'=>$_SESSION['uid']))}">{$hd.session.username}</a></span>|
+			<span class="exit"><a href="{|U('Login/out')}">退出</a></span>
+		<else/>
+		    <span class="reg"><a href="javascript:;">注册</a></span>|
+			<span class="log"><a href="javascript:;">登陆</a></span>
+		</if>     
+	</div>     
+</div>
+<div id="reg" style="display:none">
+	<h2>欢迎注册SF问答系统<span id="reg_close">[关闭]</span></h2>
+	<div>账户注册</div>
+	<form action="{|U('Reg/register')}" method="post" name="register">
+		<p><span class="left">用户名:</span><span class="right"><input type="text" name="username" id=""></span><span class="commet">(2-14个字母，数字和字符)</span></p>
+		<p><span class="left">密码:</span><span class="right"><input type="password" name="passwd" id=""></span><span class="commet">(6-20个字母，数字和字符)</span></p>
+		<p><span class="left">确认密码:</span><span class="right"><input type="password" name="repasswd" id=""></span><span class="commet">(再次输入密码)</span></p>
+		<p><span class="left">验证码:</span><span class="right"><input type="text" name="code" id="code"><img src="{|U('Reg/code')}" alt="验证码" class="verify-img"/></span><span class="commet">(输入验证码信息)</span></p>
+		<p class="sub"><input type="submit" name="submit" value="立即注册" id=""></p>
+		
+	</form>
+</div>
+<div id="log" style="display:none">
+	<h2>欢迎您登陆<span id="log_close">[关闭]</span></h2>
+	<div>用户登陆</div>
+	<form action="{|U('Login/login')}" method="post" name="login">
+		<p><span class="left">用户名:</span><span class="right"><input type="text" name="username" id=""></span><span class="commet">(请填写用户名)</span></p>
+		<p><span class="left">密码:</span><span class="right"><input type="password" name="passwd" id=""></span><span class="commet">(请填写用户密码)</span></p>
+		<p><span class="left"><input type="radio" value="on" name="auto" id="auto"></span><span class="right">下次自动登陆</span></p>
+		<p class="sub"><input type="submit" name="submit" value="登陆" id=""></p>
+	</form>
+</div>   
+<div id="search">         
+	<div class="logo">             
+		<img src="__PUBLIC__/image/logo.png" alt="sf问答" />         
+	</div>         
+	<div class="box">
+		<form action="{|U('Search/search', array('asid'=>$n['asid'], 'cid'=>$n['cid']))}" name="sch" method="post">             
+			<input type="text" name="text" id="text" />             
+			<input type="submit" id="sub" value="搜索答案"/>          
+		</form>          
+	</div>         
+	<a href="{|U('Ask/ask')}" idd="ask"><button>？我要提问</button></a>     
+</div>     
+<div id="nav">         
+	<ul class="list"> 
+		<li class="nav_sel"><a href="{|U('Index/index')}" class="home">问答首页</a></li>             
+		<li class="nav_sel ask_cate">
+			<a href="#" class="ask_list">问题库</a>
+			<ul class="hidden" style="display:none;">
+				<list from="$topCate" name="n">
+				<li><a href="{|U('List/index', array('cid'=>$n['cid']))}">{$n.title}</a></li>
+				</list>
+				
+			</ul>
+		</li> 
+	</ul>
+	<p>累计问答次数(<strong>{$askNum}</strong>)次</p>     
+</div>

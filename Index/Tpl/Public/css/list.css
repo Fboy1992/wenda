@@ -1,0 +1,291 @@
+/* 光荣墙开始 */
+#honor_wall {
+
+	height: 160px;
+	width: 956px;
+	border: 2px solid #24ad41;
+	margin: 5px auto;
+	
+}
+#honor_wall h3 {
+	background: #24ad41;
+}
+/* 光荣墙结束 */
+/*右侧区域开始*/
+#right {
+	
+	height: 505px;
+	width: 215px;
+	position:absolute;
+	top:0;
+	right: 0;
+	
+}
+/*右侧上部开始*/
+
+#right .top {
+	position: absolute;
+	top:0;
+	right: 0;
+	border: 2px solid #24ad41;
+	height: 240px;
+	width: 215px;
+	
+}
+#right .top h3 {
+	text-align: center;
+	background: #24ad41;
+}
+#right .top .user {
+	text-align: center;
+	position: relative;
+	height: 120px;
+	width: 215px;
+	margin: 0 auto;
+	
+}
+#right .top .user dt {
+	position: absolute;
+	left: 10px;
+}
+#right .top .user dd {
+	font-size: 12px;
+	position: relative;
+	top:30px;
+	margin-top: 5px;
+}
+#right .top .user dd em {
+	color:#d65;
+}
+#right .top .relate {
+	height: 50px;
+	width: 215px;
+	border-bottom: 2px solid #24ad41;
+}
+#right .top .relate span {
+	font-size: 12px;
+	position: relative;
+	line-height: 30px;
+	display: inline-block;
+	float: left;
+	width: 71px;
+	height: 50px;
+	text-align: center;
+}
+#right .top .relate span em {
+	position: absolute;
+	top:20px;
+	left: 24px;
+	text-align: center;
+	color:#d65;
+
+}
+#right .top .rel_ask {
+	height: 50px;
+	width: 215px;
+	text-align: center;
+	position: relative;
+}
+#right .top .rel_ask a {
+	margin-top: 10px;
+	display: inline-block;
+	line-height: 20px;
+	height: 20px;
+	width: 90px;
+	border:2px solid #d56;
+	font-size: 12px;
+	color:#333;
+	
+}
+#right .top .rel_ask a:hover {
+	background: rgba(11,234,43,0.8);
+}
+#right .top .rel_ask a em{
+	display: block;
+	height: 15px;
+	width: 15px;
+	float:left;
+	margin-top: 2px;
+	margin-left: 8px;
+	
+}
+#right .top .rel_ask a span{
+	display: block;
+	margin-left: 5px;
+	width: 70px;
+	height: 20px;
+	line-height: 20px;	
+	text-align: center;
+}
+#right .top div.r_login {
+  background: #F10844;
+  height: 30px;
+  width: 200px;
+  text-align: center;
+  line-height: 30px;
+  margin: 20px auto;
+}
+#right .top div.r_login a{
+	color:#333;
+}
+/*右侧上部结束*/
+/*右侧下部开始*/
+#right .bot {
+	position: absolute;
+	top:248px;
+	right: 0;
+	border: 2px solid #24ad41;
+	height: 257px;
+	width: 215px;
+	
+}
+#right .bot h3 {
+	text-align: center;
+	background: #24ad41;
+}
+#right .bot dl dt {
+	font-size: 12px;
+	color: #24ad41;
+}
+
+#right .bot  dl.one {
+	position: relative;
+	border-bottom:2px solid #24ad41;
+	height: 120px; 
+	width: 215px;
+}
+#right .bot  dl {
+	position: relative;
+	display: block;
+}
+#right .bot dt {
+	position: absolute;
+	left: 10px;
+}
+#right .bot dd {
+	font-size: 12px;
+	position: relative;
+	top:20px;
+	margin-top: 3px;
+	text-align: center;
+}
+#right .bot dd img {
+	height: 20px;
+	width: 20px;
+	
+}
+#right .bot dd em {
+	color:#f65;
+}
+/*右侧下部结束*/
+
+/*
+中间盒子
+
+ */
+#center .location {
+	height: 30px;
+	position: absolute;
+	top:5px;
+	left:5px;
+	color:#333;
+}
+#center {
+	height: 510px;
+	width: 960px;
+	margin:5px auto;
+	position: relative;
+}
+#center #left {
+	width:730px;
+	height: 505px;
+	border: 2px solid #24ad41;
+}
+#center #left #cate-list {
+	width:730px;
+	height: 200px;
+	margin-top: 5px;
+	border-bottom: 2px solid #24ad41;
+	
+}
+#center #left #cate-list p {
+	position: absolute;
+	top:30px;
+	left:20px;
+	font-size: 14px;
+	color:#f10844;
+	font-weight: bold;
+	font-family: "Microsoft YaHei";
+}
+#center #left #cate-list ul {
+	
+	height: 120px;
+	width:600px;
+	position: absolute;
+	top:50px;
+	left: 10px;
+	padding:10px;
+}
+#center #left #cate-list ul li {
+	display: inline-block;
+	height:30px;
+	width: 180px;
+}
+#center #left #cate-list ul li a {
+	display: inline-block;
+	text-align: center;
+	line-height: 30px;
+	font-size: 18px;
+	height:20px;
+	width: 180px;
+	color:#322389;
+	font-family: "Microsoft YaHei";
+}
+/*
+待解决问题等开始
+ */
+#center #left #answer-list {
+	width:730px;
+	height: 295px;
+	
+}
+#center #left #answer-list ul{
+	width: 730px;
+	height: 30px;
+	border-bottom: 1px solid #24ad41;
+}
+#center #left #answer-list ul li {
+	display: inline-block;
+	height: 30px;
+	width: 80px;
+}
+#center #left #answer-list ul li a {
+	display: inline-block;
+	height: 30px;
+	width: 80px;
+	font-family: "Microsoft YaHei";
+	font-size: 14px;
+	color:#333;
+	text-align: center;
+	line-height: 30px;
+}
+#center #left #answer-list ul li.on {
+	background: #24ad41;
+}
+#center #left #answer-list table{
+	width: 700px;
+	
+	margin: 5px auto;
+}
+#center #left #answer-list table td,tr {
+	text-align: center;
+}
+
+#center #left #answer-list table .page a {
+	display: inline-block;
+	padding: 0 5px;
+	height: 20px;
+	border:1px solid #24ad41;
+	background: #f10844;
+}
+/*待解决问题结束*/

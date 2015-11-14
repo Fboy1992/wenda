@@ -1,0 +1,50 @@
+<!-- 右侧区域开始 -->
+<div id="right">
+	<div class="top">
+		<h3>用户管理中心</h3>
+		<if value="isset($_SESSION['username']) && isset($_SESSION['uid'])">
+		<dl class="user">
+			<dt><a href="{|U('Member/index', array('uid'=>$_SESSION['uid']))}">{$hd.session.username}</a></dt>
+			<dd><img src="__PUBLIC__/image/user_main.png" alt="1234" /></dd>
+			<dd>金币：<em>{$userInfo.point}</em></dd>
+			<dd>经验值：<em>{$userInfo.exp}</em></dd>
+		</dl>
+		<div class="relate">
+			<span>回答数<em>{$userInfo.answer}</em></span>
+			<span>采纳率<em>{$userInfo.ratio}%</em></span>
+			<span>提问数<em>{$userInfo.ask}</em></span>
+		</div>
+
+		<div class="rel_ask">
+			<a href="{|U('Member/my_ask', array('uid'=>$_SESSION['uid']))}"><em><img src="__PUBLIC__/image/ask.png" alt="" /></em><span>我提问的</span></a>
+			<a href="{|U('Member/my_answer', array('uid'=>$_SESSION['uid']))}"><em><img src="__PUBLIC__/image/answer.png" alt="" /></em><span>我回答的</span></a>
+		</div>
+		<else/>
+			<div class="r_login">
+				<span><a href="#">本区域登陆可见</a></span>
+			</div>
+		</if>
+	</div>
+	<div class="bot">
+		<h3>SF问答之星</h3>
+		<dl class="one">
+			<dt>本日回答问题最多之人</dt>
+			<if value="!empty($eve_star)">
+				<dd>{$eve_star.username}</dd>
+				<dd><img src="__PUBLIC__/image/user.png" alt="fds" /></dd>
+				<dd>回答数:<em>{$eve_star.answer}</em></dd>
+				<dd>采纳率:<em>{$eve_star.ratio}%</em></dd>
+			<else/>
+				<dd class="rg">今日尚未有人回答问题</dd>
+			</if>
+		</dl>
+		<dl>
+			<dt>历史回答问题最多之人</dt>
+			<dd>{$his_star.username}</dd>
+			<dd><img src="__PUBLIC__/image/user.png" alt="fdsf" /></dd>
+			<dd>回答数:<em>{$his_star.answer}</em></dd>
+			<dd>采纳率:<em>{$his_star.ratio}%</em></dd>
+		</dl>
+	</div>
+</div>
+<!-- 右侧区域结束 -->

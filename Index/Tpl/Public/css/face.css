@@ -1,0 +1,32 @@
+#center #right .imgface_box {
+	width: 700px;
+	height: 400px;
+
+	margin: 0 auto;
+	position: relative;
+}
+#center #right .imgface_box img{ 
+	width: 180px;
+	height: 180px;
+	position:absolute;
+	top:50px;
+	left: 15px;
+
+
+}
+#center #right .imgface_box form {
+	height: 100px;
+	width: 200px;
+	position: absolute;
+	top: 50px;
+	left: 230px;
+}
+#center #right .imgface_box form input {
+	margin-top: 20px;
+}
+#center #right .imgface_box p {
+	position: absolute;
+	top:150px;
+	left: 225px;
+	border-bottom: none;
+}

@@ -1,0 +1,73 @@
+<load file="__TPL__/Common/head.html">
+	<script src="__PUBLIC__/js/member_answer.js"></script>
+	<link rel="stylesheet" href="__PUBLIC__/css/member.css" />
+</head>
+<body>     
+<load file="__TPL__/Common/top.html">
+<div id='center'>
+<!-- 左侧 -->
+	
+	<load file="__TPL__/Common/left.html">
+	<div id='right'>
+			<p class='title'>我的回答</p>
+			<ul class='ask-filter'>
+				<li class='cur' style="background:#f10844;">全部回答</li>
+				<li>被采纳的回答</li>
+			</ul>
+			<ul>
+			<div class='list list-filter'>
+				<table>
+						<if value="empty($answer)">
+							<tr height='140'>
+								<td colspan="3">你还没有回答过问题</td>
+							</tr>
+						<else/>
+							<tr bgcolor="f10844">
+								<th class='t1'>标题</th>
+								<th>回答</th>
+								<th class='t3'>更新时间</th>
+							</tr>
+							<list from="$answer" name="n">
+							<tr>
+								<td class='t1'>
+									<a href="#">{$n.content}</a><span>[{$n.title}]</span>
+								</td>
+								<td>{$n.answer}</td>
+								<td class='t3'>{$n.time|date:'Y-m-d', @@}</td>
+							</tr>
+							</list>
+						</if>
+				</table>
+				<div>{$page}</div>
+			</div>
+			<div class='list list-filter' style="display:none;">
+				<table style="overflow:auto;">
+					<if value="empty($answerOk)">
+						<tr height='140'>
+							<td colspan="3">我还没有被采纳的回答</td>
+						</tr>
+					<else/>
+					<tr bgcolor="f10844">
+						<th class='t1'>标题</th>
+						<th>回答</th>
+						<th class='t3'>更新时间</th>
+					</tr>
+						<list from="$answerOk" name="n">
+						<tr>
+							<td class='t1'>
+								<a href="">{$n.content}</a><span>[{$n.title}]</span>
+							</td>
+							<td>{$n.answer}</td>
+							<td class='t3'>{$n.time|date:'Y-m-d',@@}</td>
+						</tr>
+						</list>
+					</if>
+				</table>
+			</div>
+		</div>
+		</ul>
+</div>
+<!--------------------中部结束-------------------->
+<load file="__TPL__/Common/foot.html">
+</body>
+</html>
